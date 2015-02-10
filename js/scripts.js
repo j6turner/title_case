@@ -4,8 +4,11 @@ var titleCase = function(sentence) {
   var result = []
   var words = sentence.split(" ");
   words.forEach(function(word) {
-    result.push(word.charAt(0).toUpperCase() + word.slice(1).toLowerCase());
+    if exception !== indexOf(words[0]) {
+      result.push(word.charAt(0).toUpperCase() + word.slice(1).toLowerCase());
+    } else {
+      result.push(word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()) && exception.toLowerCase()
+    }
   });
   return result.join(" ");
-
 }
