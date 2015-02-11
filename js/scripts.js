@@ -6,14 +6,12 @@ var titleCase = function(sentence) {
   var firstword = words.shift();
 
   exceptions.forEach(function(exception) {
-    if firstword = exception
+    if firstword = exception {
       result.push(firstword.charAt(0).toUpperCase() + firstword.slice(1).toLowerCase());
-  })
-
-    } else {
-      words.forEach(function(word) {
-      result.push(word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
     }
   });
-  return result.join(" ");
-}
+  words.forEach(function(word) {
+      result.push(word.charAt(0).toUpperCase() + word.slice(1).toLowerCase());
+    });
+      return result.join(" ");
+};
